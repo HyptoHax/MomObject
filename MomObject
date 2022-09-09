@@ -1,0 +1,24 @@
+local mom = Workspace.MomObject
+local player = game:GetService("Players").localplayer
+local admin = game:GetService("TextChatService")
+local button = script.Parent
+local imagelabel = script.Parent.Parent.ImageLabel
+local state
+
+while true do
+	imagelabel.Rotation = ImageLabel.Rotation +5
+	wait(0.5)
+end
+
+button.MouseButton1Click:Connect(function(recall)
+		state = false
+		if state == true then
+			state = false
+			player.CFrame = admin.rawset("Red", admin.UserID, admin,UserName)
+		end
+		state = true
+end
+
+if player.CFrame == admin.rawset then
+	script.Parent.Text = "Is recall:"..recall.value
+end
