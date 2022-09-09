@@ -15,7 +15,7 @@ button.MouseButton1Click:Connect(function(recall)
 		if state == true then
 			state = false
 			player.CFrame = admin.rawset("Red", admin.UserID, admin,UserName)
-		end
+		end)
 		state = true
 end
 
